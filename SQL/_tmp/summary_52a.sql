@@ -1,0 +1,1 @@
+﻿EXEC rpt.sp_refresh_governance_reporting;

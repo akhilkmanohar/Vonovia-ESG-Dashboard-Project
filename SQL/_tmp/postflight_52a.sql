@@ -1,0 +1,7 @@
+﻿SET NOCOUNT ON;
+BEGIN TRY
+    ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 0;
+    PRINT ''[Postflight] Restored Database-scoped MAXDOP = 0.'';
+END TRY BEGIN CATCH
+    PRINT CONCAT(''[Postflight] Restore MAXDOP failed: '', ERROR_MESSAGE());
+END CATCH;
